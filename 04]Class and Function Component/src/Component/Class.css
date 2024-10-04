@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(https://img.freepik.com/free-vector/blue-polygon-dark-background-social-template_53876-116080.jpg?t=st=1728039009~exp=1728042609~hmac=0b3186a34a2f7e28c117bf8380a5d9bea991b1c9a6c149162ba73d8165338245&w=1380);
+    background-size: cover;
+}
+.main{
+    /* height: 100%; */
+    width: 100%;
+    
+}
+nav a{
+    margin-left: 35px;
+    color: white;
+}
+h1{
+    padding-top: 350px;
+}
