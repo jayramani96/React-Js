@@ -54,12 +54,12 @@ Export :- Multiple item export in one components.
 Components :- It is reusable piece of code.
               Two Types :-
                            1] Functional Components :- It provides UI.
-                                                       Shortcut => rfc, rfce
+                                                       Shortcut => rfc :- react functional component, rfce :- react functional component export
                                                        It does not have state, props and lifecycle methods.
                                                        NO methods
 
                            2] Class Components :- In the component use in ES6 class, like opps concepts.
-                                                  Shortcut => rcc
+                                                  Shortcut => rcc :- react class component
                                                   It does  have state, props and lifecycle methods.
                                                   Three Types : 1) Components did mount ()
                                                                 2) Components did update ()
