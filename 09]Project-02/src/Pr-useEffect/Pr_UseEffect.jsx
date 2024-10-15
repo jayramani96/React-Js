@@ -14,7 +14,6 @@ export default function Pr_UseEffect() {
         <button onClick={()=>setNum(num-1)}>-</button>
         <button onClick={()=>setNum(0)}><i className="fa-solid fa-arrow-rotate-right"></i></button>
         <button onClick={()=>setNum(num+1)}>+</button>
-        
     </div>
   )
 }

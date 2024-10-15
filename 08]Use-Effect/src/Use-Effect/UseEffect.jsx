@@ -4,10 +4,17 @@ export default function UseEffect() {
 
     const [num,setNum] = useState(0)
 
+    // const countUpdate = (val) => {
+    //   if (val === "inc")return setNum(num+1);
+    //   if (val === "dec")return setNum(num-1);
+
+    // };
+
     useEffect(()=>{
         //mounting
 
         return console.log('mounting');
+        // document.title = num;
         
     })
   return (
