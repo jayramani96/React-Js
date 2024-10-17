@@ -2,18 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Todolist from './ToDoList/Todolist'
+import Uncontrolled from './Component/Uncontrolled'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Todolist/>
+      <Uncontrolled/>
     </>
   )
 }
 
 export default App
-
-
