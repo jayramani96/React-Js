@@ -10,7 +10,10 @@ export default function Uncontrolled() {
     const handleSubmit = (e) => {
         e.preventDefault(); 
         console.log(nameRef.current.value, cityRef.current.value, subRef.current.value);
-        setData([...data, nameRef.current.value, cityRef.current.value, subRef.current.value])
+        const name = nameRef.current.value;
+        const city = cityRef.current.value
+        const subject = subRef.current.value
+        setData([...data,{name,city,subject}])
         
     }
 
@@ -25,7 +28,20 @@ export default function Uncontrolled() {
         </form>
         {
             data.map((e,i) => {
-                return <p key={i}>{e}</p>
+                return  <table border={1} key={i}>
+                        <tbody>
+                            <tr>
+                                <td>name</td>
+                                <td>city</td>
+                                <td>subject</td>
+                            </tr>
+                            <tr>
+                                <td>{e.name}</td>
+                                <td>{e.city}</td>
+                                <td>{e.subject}</td>
+                            </tr>
+                        </tbody>
+                    </table>
             }) 
         }
     </div>
