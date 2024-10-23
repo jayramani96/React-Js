@@ -34,7 +34,7 @@ export default function DynamicFormCom() {
                 
                 {error && <span style={{ color: "red" }}>{error}</span>}
 
-                <select onChange={(e) => SecurityPolicyViolationEvent(e.target.value)}>
+                <select onChange={(e) => setCat(e.target.value)}>
                     <option hidden>Category</option>
                     <option value={"clothes"}>Cloths</option>
                     <option value={"shoes"}>Shoes</option>

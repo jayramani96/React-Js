@@ -1,0 +1,60 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  margin: 0;
+  padding: 20px;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%; /* Full width on smaller screens */
+}
+
+input, select {
+  width: calc(100% - 16px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #ff7e5f; /* Focus border color */
+  outline: none;
+}
+
+button {
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #feb47b; /* Button hover color */
+}
+
+span {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin: 10px 0;
+}
