@@ -7,9 +7,9 @@ export default function CrudLocalStorage() {
     const [hobbies, setHobbies] = useState([]);
     const [city, setCity] = useState('');
     const [record, setRecord] = useState([]);
-    const [editId, setEditId] = useState(null); // for tracking editing state
+    const [editId, setEditId] = useState(null); 
 
-    // Load data from local storage when the component mounts
+
     useEffect(() => {
         const data = JSON.parse(localStorage.getItem('employee')) || [];
         setRecord(data);
@@ -21,20 +21,17 @@ export default function CrudLocalStorage() {
 
         let updatedRecord;
         if (editId) {
-            // Edit existing record
             updatedRecord = record.map((item) =>
                 item.id === editId ? obj : item
             );
-            setEditId(null); // reset edit mode
+            setEditId(null); 
         } else {
-            // Add new record
             updatedRecord = [...record, obj];
         }
 
         setRecord(updatedRecord);
         localStorage.setItem('employee', JSON.stringify(updatedRecord));
 
-        // Reset form fields after submit
         setName('');
         setAge('');
         setGender('');
