@@ -18,7 +18,6 @@ function App() {
   //map// 
   let arr = [1,2, "jay"]
 
-
   // spread Opretor//
   let arr2 = [...arr,"spread"]
   console.log(arr2);
