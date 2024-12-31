@@ -1,0 +1,150 @@
+/* @media (min-width:769px) and (max-width:1200px) {
+    .box3{
+        display: flex;
+        flex-direction: column;
+    }
+    .box3 div{
+        width: 95%;
+        margin-top: 10px;
+    }
+    .box4 input{
+        display: none;
+    }
+    .main2{
+        display: flex;
+        flex-direction: column;
+    }
+    .table{
+        width: 95%;
+    }
+    table{
+        width: 95%;
+    }
+    .table2{
+        width: 95%;
+    }
+    .footer{
+        display: none;
+    }
+    .left2{
+        display: none;
+    }
+    .con{
+        display: none;
+    }
+    .table button{
+        display: none;
+    }
+    .table2 button{
+        display: none;
+    }
+}
+@media (min-width:481px) and (max-width:768px) {
+    .box3{
+        display: flex;
+        flex-direction: column;
+    }
+    .box3 div{
+        width: 95%;
+        margin-top: 10px;
+    }
+    .box4 input{
+        display: none;
+    }
+    .main2{
+        display: flex;
+        flex-direction: column;
+    }
+    .table{
+        width: 95%;
+    }
+    table{
+        width: 95%;
+    }
+    .table2{
+        width: 95%;
+    }
+    .footer{
+        display: none;
+    }
+    .left{
+        display: none;
+    }
+    .left2{
+        width: 10%;
+    }
+    .right{
+        width: 90%;
+    }
+    .con{
+        display: none;
+    }
+    .table button{
+        display: none;
+    }
+    .table2 button{
+        display: none;
+    }
+}
+@media (min-width:320px) and (max-width:480px) {
+    .box3{
+        display: flex;
+        flex-direction: column;
+    }
+    .box3 div{
+        width: 95%;
+        margin-top: 10px;
+    }
+    .box4 input{
+        display: none;
+    }
+    .main2{
+        display: flex;
+        flex-direction: column;
+    }
+    .table{
+        width: 95%;
+    }
+    table{
+        width: 95%;
+    }
+    .table2{
+        width: 95%;
+    }
+    .footer{
+        display: none;
+    }
+    .left{
+        display: none;
+    }
+    .left2{
+        width: 15%;
+    }
+    .right{
+        width: 85%;
+    }
+    .con{
+        display: none;
+    }
+    .table button{
+        display: none;
+    }
+    .table2 button{
+        display: none;
+    }
+    #search{
+        display: none;
+    }
+    #bell{
+        display: none;
+    }
+    #gear{
+        display: none;
+    }
+    #city{
+        display: none;
+    }
+    .td{
+        display: none;
+    }
+} */

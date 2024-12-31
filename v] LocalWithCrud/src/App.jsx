@@ -2,15 +2,14 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import LocalIntro from './CrudWLS/LocalIntro'
-import CRD from './CRD'
+import LocalWithCrud from './LocalWithCrud'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <CRD/>
+      <LocalWithCrud/>
     </>
   )
 }

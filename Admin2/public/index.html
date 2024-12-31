@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminpanel</title>
+    <!-- font cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- j querry -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Calender -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- media -->
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+
+    <div class="left2">
+        <nav>
+            <img src="https://elstar.themenate.net/img/logo/logo-light-streamline.png" alt="">
+        </nav>
+        <center>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>                
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"></path></svg>                
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>                
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>                
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8"></path></svg>                
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+        </center>
+    </div>
+
+
+
+
+    <div class="left l1">
+        <nav>
+            <img src="https://elstar.themenate.net/img/logo/logo-light-full.png" alt="">
+        </nav>
+
+        <!-- apps -->
+
+        <div class="a1">
+            <p style="margin-left: 10px;margin-bottom: 10px;margin-top:10px;font-size: 17px;color: #5b6471;">APPS</p>
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <p>Project</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Dashboard</p>
+                </div>
+                <div class="aaa">
+                    <p>Project List</p>
+                </div>
+                <div class="aaa">
+                    <p>Scrum Board</p>
+                </div>
+                <div class="aaa">
+                    <p>Issue</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <p>CRM</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Dashboard</p>
+                </div>
+                <div class="aaa">
+                    <p>Calender</p>
+                </div>
+                <div class="aaa">
+                    <p>Customers</p>
+                </div>
+                <div class="aaa">
+                    <p>Customer Details</p>
+                </div>
+                <div class="aaa">
+                    <p>Mail</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                <p>Sales</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Dashboard</p>
+                </div>
+                <div class="aaa">
+                    <p>Product List</p>
+                </div>
+                <div class="aaa">
+                    <p>Product Edit</p>
+                </div>
+                <div class="aaa">
+                    <p>New Product</p>
+                </div>
+                <div class="aaa">
+                    <p>Order List</p>
+                </div>
+                <div class="aaa">
+                    <p>Order Details</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <p>Crypto</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Dashboard</p>
+                </div>
+                <div class="aaa">
+                    <p>Portfolio</p>
+                </div>
+                <div class="aaa">
+                    <p>Market</p>
+                </div>
+                <div class="aaa">
+                    <p>Wellets</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <p>Knowledge Base</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Help Center</p>
+                </div>
+                <div class="aaa">
+                    <p>Article</p>
+                </div>
+                <div class="aaa">
+                    <p>Manage Article</p>
+                </div>
+                <div class="aaa">
+                    <p>Edit Article</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <p>Account</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Settings</p>
+                </div>
+                <div class="aaa">
+                    <p>invoice</p>
+                </div>
+                <div class="aaa">
+                    <p>Activity Log</p>
+                </div>
+                <div class="aaa">
+                    <p>KYC Form<p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ui -->
+
+        <div class="a1">
+            <p style="margin-left: 10px;margin-bottom: 10px;margin-top:10px;font-size: 17px;color: #5b6471;">UI COMPONENENTS</p>
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>                
+                <p>Common</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Dashboard</p>
+                </div>
+                <div class="aaa">
+                    <p>Project List</p>
+                </div>
+                <div class="aaa">
+                    <p>Scrum Board</p>
+                </div>
+                <div class="aaa">
+                    <p>Issue</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                <p>Feedback</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Common</p>
+                </div>
+                <div class="aaa">
+                    <p>Calender</p>
+                </div>
+                <div class="aaa">
+                    <p>Customers</p>
+                </div>
+                <div class="aaa">
+                    <p>Customer Details</p>
+                </div>
+                <div class="aaa">
+                    <p>Mail</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <p>Data Display</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Dashboard</p>
+                </div>
+                <div class="aaa">
+                    <p>Product List</p>
+                </div>
+                <div class="aaa">
+                    <p>Product Edit</p>
+                </div>
+                <div class="aaa">
+                    <p>New Product</p>
+                </div>
+                <div class="aaa">
+                    <p>Order List</p>
+                </div>
+                <div class="aaa">
+                    <p>Order Details</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <p>Forms</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Dashboard</p>
+                </div>
+                <div class="aaa">
+                    <p>Portfolio</p>
+                </div>
+                <div class="aaa">
+                    <p>Market</p>
+                </div>
+                <div class="aaa">
+                    <p>Wellets</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                <p>Navigation</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Help Center</p>
+                </div>
+                <div class="aaa">
+                    <p>Article</p>
+                </div>
+                <div class="aaa">
+                    <p>Manage Article</p>
+                </div>
+                <div class="aaa">
+                    <p>Edit Article</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                <p>Graph</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Settings</p>
+                </div>
+                <div class="aaa">
+                    <p>invoice</p>
+                </div>
+                <div class="aaa">
+                    <p>Activity Log</p>
+                </div>
+                <div class="aaa">
+                    <p>KYC Form<p>
+                </div>
+            </div>
+        </div>
+
+        <!-- pages -->
+        
+        <div class="a1">
+            <p style="margin-left: 10px;margin-bottom: 10px;margin-top:10px;font-size: 17px;color: #5b6471;">PAGES</p>
+            <div class="b">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"></path></svg>                
+                <p>Welcome</p>
+                <!-- <i class="fa-solid fa-angle-down"></i> -->
+            </div>
+
+            <div class="b">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                <p>Access Denied</p>
+                <!-- <i class="fa-solid fa-angle-down"></i> -->
+            </div>
+        </div>
+
+        <!-- authentication -->
+
+        <div class="a1">
+            <p style="margin-left: 10px;margin-bottom: 10px;margin-top:10px;font-size: 17px;color: #5b6471;">AUTHENTICATION</p>
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>                
+                <p>Sign In</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Simple</p>
+                </div>
+                <div class="aaa">
+                    <p>Side</p>
+                </div>
+                <div class="aaa">
+                    <p>Cover</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                <p>Sign Up</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Simple</p>
+                </div>
+                <div class="aaa">
+                    <p>Side</p>
+                </div>
+                <div class="aaa">
+                    <p>Cover</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                <p>Forgot Password</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Simple</p>
+                </div>
+                <div class="aaa">
+                    <p>Side</p>
+                </div>
+                <div class="aaa">
+                    <p>Cover</p>
+                </div>
+            </div>
+
+            <div class="a">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
+                <p>Reset Password</p>
+                <i class="fa-solid fa-angle-down i"></i>
+            </div>
+            <div class="aa">
+                <div class="aaa">
+                    <p>Simple</p>
+                </div>
+                <div class="aaa">
+                    <p>Side</p>
+                </div>
+                <div class="aaa">
+                    <p>Cover</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GUIDE -->
+
+        <div class="a1">
+            <p style="margin-left: 10px;margin-bottom: 10px;margin-top:10px;font-size: 17px;color: #5b6471;">GUIDE</p>
+            <div class="b">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>                
+                <p>Documentation</p>
+                <!-- <i class="fa-solid fa-angle-down"></i> -->
+            </div>
+
+            <div class="b">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                <p>Shared Component</p>
+                <!-- <i class="fa-solid fa-angle-down"></i> -->
+            </div>
+
+            <div class="b">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8"></path></svg>                
+                <p>Utilities</p>
+                <!-- <i class="fa-solid fa-angle-down"></i> -->
+            </div>
+
+            <div class="b">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                <p>Changelog</p>
+                <!-- <i class="fa-solid fa-angle-down"></i> -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="right">
+        <nav>
+            <div class="a">
+                <i id="bar" class="fa-solid fa-bars"></i>
+                <i id="search" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="b">
+                <img id="city" src="https://elstar.themenate.net/img/countries/us.png" alt="">
+                <i id="bell" class="fa-regular fa-bell"></i>
+                <i id="gear" class="fa-solid fa-gear"></i>
+                <img src="https://elstar.themenate.net/img/avatars/thumb-1.jpg" alt="">
+                <div class="bb">
+                    <p>Admin</p>
+                    <p>Carolyn Perkins</p>
+                </div>
+            </div>
+        </nav>
+        <!-- <div class="sign-in">
+            <div class="b1">
+                <img id="city" src="https://elstar.themenate.net/img/countries/us.png" alt="">
+                <i id="bell" class="fa-regular fa-bell"></i>
+                <i id="gear" class="fa-solid fa-gear"></i>
+                <img src="https://elstar.themenate.net/img/avatars/thumb-1.jpg" alt="">
+                <div class="bb">
+                    <p>Admin</p>
+                    <p>Carolyn Perkins</p>
+                </div>-+
+                <hr>
+            <a href="" class="sign-1"><i class="ri-account-circle-fill"></i>Profile</a>
+            <a href="" class="sign-2"><i class="ri-settings-2-line"></i>Account Setting</a>
+            <a href="" class="sign-3"><i class="ri-line-chart-line"></i>Activity log</a>
+            <hr>
+            <a href="" class="sign-4"><i class="ri-logout-box-r-line"></i>Sign Out</a>
+        </div> -->
+
+
+        <div class="b1">
+            <h1>Sales Overview</h1>
+            
+            <p>View your current sales & summary
+  
+            </p>
+  
+           <div class="box4">
+              <input type="text" placeholder="September 27,2023~Dec 27,2023">
+              <div class="con">
+                  Filter
+              </div>
+           </div>
+          </div>
+          
+          <div class="box3">
+              <div>
+                  <h4>Revenue</h4>
+                  <br>
+                  <h1>$21,827.13</h1>
+                  <p>vs. 3 months prior to <b>20 Jan</b></p>
+                  <button class="btn1"><i class="fa-solid fa-arrow-up" style="color: #0ada07;"></i><b>11.4%</b></button>
+              </div>
+              <div>
+                  <h4>Orders</h4>
+                  <br>
+                  <h1>1,758</h1>
+                  <p>vs. 3 months prior to <b>20 Jan</b></p>
+                  <button class="btn1"><i class="fa-solid fa-arrow-up" style="color: #0ada07;"></i><b>11.4%</b></button>
+  
+              </div>
+              <div>
+                  <h4>Purchases</h4>
+                  <br>
+                  <h1>$7,249.31</h1>
+                  <p>vs. 3 months prior to <b>20 Jan</b></p>
+                  <button class="btn1"><i class="fa-solid fa-arrow-up" style="color: #0ada07;"></i><b>11.4%</b></button>
+  
+              </div>
+          </div>
+
+          <div class="chart">
+
+            <div id="chart1"></div> 
+            <div id="chart2"></div>
+            <!-- <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                             
+                  </div>
+                  <div class="swiper-slide">
+                    <center>
+                        <div id="chart2"></div> 
+                    </center>
+                  </div>
+                  <div class="swiper-slide">
+                    <center>
+                        <div id='calendar'></div>
+                    </center>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div> -->
+          </div>
+
+  
+          
+          <div class="main2">
+          <div class="table" >
+                  <h1>Latest Orders</h1>
+                  <button>View Orders</button>
+              <table class="tb1" cellspacing="0">
+                  <tr>
+                      <th class="td">ORDER</th>
+                      <th>STATUS</th>
+                      <th class="td">DATE</th>
+                      <th>CUSTOMER</th>
+                      <th>PROFILE PROGRESS</th>
+                  </tr>
+                  <tr>
+                      <td class="td" style="font-weight: bold;">#95954</td>
+                      <td style="color: #50be83;font-weight: bold;">paid</td>
+                      <td class="td">10/08/2022</td>
+                      <td>Ron Vargas</td>
+                      <td>$168.00</td>
+                  </tr>
+                  <tr>
+                      <td class="td" style="font-weight: bold;">#95423</td>
+                      <td style="color: #50be83;font-weight: bold;">paid</td>
+                      <td class="td">30/07/2022</td>
+                      <td>Carolyn Hanso</td>
+                      <td>$523.00</td>
+                  </tr>
+                  <tr>
+                      <td class="td" style="font-weight: bold;">#92903</td>
+                      <td style="color: #f6a10b ;font-weight: bold;font-weight: bold;">pending</td>
+                      <td class="td">18/07/2022</td>
+                      <td>Gabriella May</td>
+                      <td>$81.00</td>
+                  </tr>
+                  <tr>
+                      <td class="td" style="font-weight: bold;">#92627</td>
+                      <td style="color: #f06761;font-weight: bold;font-weight: bold;">Failed</td>
+                      <td class="td">09/07/2022</td>
+                      <td>Tara Fletcher</td>
+                      <td>$279.00</td>
+                  </tr>
+                  <tr>
+                      <td class="td" style="font-weight: bold;">#89332</td>
+                      <td style="color: #50be83;font-weight: bold;">paid</td>
+                      <td class="td">02/06/2022</td>
+                      <td>Eileen Horton</td>
+                      <td>$597.00</td>
+                  </tr>
+                  <tr>
+                      <td class="td" style="font-weight: bold;">#86497</td>
+                      <td style="color: #f06761;font-weight: bold;">Failed</td>
+                      <td class="td">13/03/2022</td>
+                      <td>Lloyd Obrien</td>
+                      <td>$189.00</td>
+                  </tr>
+                  <tr>
+                      <td class="td" style="font-weight: bold;">#86212</td>
+                      <td style="color: #50be83;font-weight: bold;">paid</td>
+                      <td class="td">09/083/2022</td>
+                      <td>Lloyd Obrien</td>
+                      <td>$672.00</td>
+                  </tr>
+              </table>
+  
+  
+          </div>
+  
+  
+          <div class="table2">
+              <h1>Top Selling</h1>
+              <button>View Products</button>
+          <table class="tb" cellspacing="0">
+              <tr>
+                  <th>PRODUCT</th>
+                  <th>SOLD</th>
+              
+              </tr>
+              <tr>
+                  <td style="font-weight: bold;"><img src="1.jpg" alt=""><b>Luminaire Giotto Headphones</b></td>
+                  <td style="font-weight: bold;">252</td>
+                  
+               
+              </tr>
+              <tr>
+                  <td style="font-weight: bold;"><img src="3.jpg" alt="">Black Sneaker</td>
+                  <td style="font-weight: bold;">186</td>
+                 
+              
+              </tr>
+              <tr>
+                  <td style="font-weight: bold;"><img src="4.jpg" alt="">Gray Hoodies</td>
+                  <td style="font-weight: bold;font-weight: bold;">166</td>
+                  
+                
+              </tr>
+              <tr>
+                  <td style="font-weight: bold;"><img src="5.jpg" alt="">Blue Backpack</td>
+                  <td style="font-weight: bold;font-weight: bold;">93</td>
+                  
+                 
+              </tr>
+              <tr>
+                  <td style="font-weight: bold;"><img src="7.jpg" alt="">Strip Analog Watch</td>
+                  <td style="font-weight: bold;">81</td>
+                  
+              
+              </tr>
+             
+          </table>
+          </div>
+  
+      </div>
+  
+  
+
+  
+      <div class="footer">
+          <p style="width: 850px;">Copyright © 2023 Elstar All rights reserved.</p>
+      <p style="width: 300px;text-align: right;">Term & Conditions | Privacy & Policy</p>
+      </div>
+      </div>
+  
+  
+      </div>
+  
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="scripet.js"></script>

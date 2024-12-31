@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Width from './WidthCount/Width'
 import SignUp from './ReactFirebase/SignUp'
+import LocalWithCrud from './LocalWithCrud'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Width/>
+      <LocalWithCrud/>
     </>
   )
 }
